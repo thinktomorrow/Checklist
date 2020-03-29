@@ -8188,6 +8188,15 @@ video {
   padding: 1rem;
 }
 
+.checked {
+  background-color: #48bb78;
+  text-decoration: line-through;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
