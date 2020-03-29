@@ -3,10 +3,6 @@
 @tailwind utilities;
 @import 'utilities';
 
-.checked{
-    @apply bg-green-500 line-through;
-}
-
 html{
   scroll-behavior: smooth;
 }

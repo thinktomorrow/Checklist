@@ -1,2 +1,6 @@
 .stack{ @apply my-4 }
 .inset{ @apply p-4 }
+
+.checked{
+    @apply bg-green-500 text-green-800;
+}

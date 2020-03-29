@@ -1,9 +1,9 @@
 const mix  = require('laravel-mix');
 require('laravel-mix-purgecss');
 
-mix.js('resources/js/main.js', 'assets')
-    .sass('resources/css/main.scss', 'assets')
-    .copy('resources/img', 'assets/img/')
+mix.js('resources/js/main.js', 'public/assets')
+    .sass('resources/css/main.scss', 'public/assets')
+    .copy('resources/img', 'public/assets/img')
     .setPublicPath('public')
     .version()
 
