@@ -14,6 +14,7 @@
 </head>
 
 <body class="bg-primary-100">
+  <?php include() ?>
   <nav class="container stack">Dagelijkse checklist</nav>
 
   <main class="w-1/2 mx-auto py-12">
@@ -21,22 +22,26 @@
       <h1 class="text-4xl">Jouw dagelijkse checklist</h1>
       <p class="text-xl font-hairline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut eaque error id asperiores! Dolores nihil nobis dignissimos repellendus eius odio necessitatibus obcaecati tempore esse, facilis blanditiis numquam accusamus totam soluta.</p>
     </div>
-    <?php 
-    $listItems = array(
+    <?php
+    $listItemsWork = array(
     '🤸‍♀️ Neem korte pauzes om je benen te strekken',
+    '🏃🏻‍♀️ Stop op tijd met werken en ga een wandeling maken!',
     '💦 Drink voldoende water of thee',
-    '🍎 Eet gezond',
-    '🏃🏻‍♀️ Stop op tijd met werken en ga een wandeling maken!');
-    foreach ($listItems as $i=>$item) { ?>
-    
-    <article id="article-<?php echo $i; ?>" class="py-8 px-4 stack bg-primary-200 font-light cursor-pointer" data-toggle-class="#article-<?php echo $i; ?>,bg-primary-800">
+    '🍎 Eet gezond');
+    ?>
+
+    <?php foreach($listItemsWork as $a=>$item){ ?>
+      <article id="article-<?php echo $a; ?>" class="py-8 px-4 stack bg-primary-200 font-light cursor-pointer" data-toggle-class="#article-<?php echo $a; ?>,checked|#icon-<?php echo $a; ?>">
+        <div id="icon-<?php echo $a; ?>" class="hidden">
+          <svg width="28" height="28">
+          <use xlink:href="#check"></use>
+          </svg>
+          
+        </div>
         <?php echo $item; ?>
       </article>
-    
-      <?php } ?>
+      <?php }; ?>
 
-
-    
   </main>
 
   <script src="assets/main.js"></script>
