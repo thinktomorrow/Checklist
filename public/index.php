@@ -57,7 +57,7 @@
   </main>
 
   <footer class="container stack text-center font-hairline text-sm text-primary-800">
-    &copy; 2020 - &#129412; magie door Think Tomorrow
+    &copy; 2020 - &#129412; &#127881; door Think Tomorrow
   </footer>
 
   <script src="assets/main.js"></script>
