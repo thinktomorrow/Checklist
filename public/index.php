@@ -19,7 +19,7 @@
 
 <body class="bg-primary-100">
   <?php include('assets/img/svg-symbol.php') ?>
-  <nav class="container stack flex justify-between font-hairline hidden md:flex">
+  <nav class="container stack flex justify-between font-hairline hidden md:flex pb-12">
     <span>Dagelijkse checklist</span>
     <div>
       <a href="mailto:info@thinktomorrow.be?subject=Een checklist voor jouw bedrijf" target="_blank" class="mx-2">Jouw eigen checklist?</a>
@@ -28,14 +28,17 @@
     </div>
   </nav>
 
-  <main class="w-4/5 md:w-1/2 mx-auto py-12">
-    <div class="my-12 relative">
-      <svg width="28" height="28" class="md:absolute md:-ml-10 md:mt-3">
+  <div class="sticky top-0 w-4/5 md:w-1/2 mx-auto bg-primary-100 py-4">
+    <svg width="28" height="28" class="md:absolute md:-ml-10 md:mt-3">
         <use xlink:href="#clipboard"></use>
       </svg>
       <h1 class="text-4xl">Jouw dagelijkse checklist</h1>
       <p class="font-hairline mb-2"><span id="checkedItems">0</span> van <span id="numberOfItems">0</span></p>
-      <p class="text-xl font-hairline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut eaque error id asperiores! Dolores nihil nobis dignissimos repellendus eius odio necessitatibus obcaecati tempore esse, facilis blanditiis numquam accusamus totam soluta.</p>
+  </div>
+  <main class="w-4/5 md:w-1/2 mx-auto">
+    <div class="intro pb-12">
+      <p class="text-xl font-hairline">Heb je met het thuiswerk ook het gevoel dat je aan het jongleren bent met allerlei zaken én niet productief bent? 
+      Als je onderstaande checklist dagelijks afwerkt, stopt het jongleren van zelf. Er komt stilaan routine in je thuiswerk en de productiviteit volgt wel. Hopelijk helpt het voor je. &#129310;</p>
     </div>
     <?php
     $listItemsWork = array(
@@ -47,7 +50,8 @@
       'Ik heb mijn timetracking ingevuld.',
       'Ik heb mijn meetings in de namiddag gepland.',
       'Ik heb mijn collega\'s voldoende geïnformeerd over mijn taken',
-      'Ik heb minstens twee actieve activiteiten gedaan',
+      'Ik heb mijn dagplanning kunnen afwerken',
+      'Ik heb minstens twee sportieve activiteiten gedaan',
       'Ik heb minstens 2 liter water gedronken.',
     );
     ?>
@@ -64,7 +68,7 @@
       <?php include('_layout/partials/celebrate.php') ?>
   </main>
 
-  <footer class="container stack text-center font-hairline text-sm text-primary-800">
+  <footer class="container stack text-center font-hairline text-sm text-primary-800 pt-12">
     &copy; 2020 - &#129412; &#127881; door Think Tomorrow
   </footer>
 
