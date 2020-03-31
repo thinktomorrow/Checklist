@@ -7792,9 +7792,13 @@ video {
   padding: 1rem;
 }
 
-.checked {
-  background-color: #48bb78;
+.active {
+  background-color: #9ae6b4;
   color: #276749;
+}
+
+.bg-black-50 {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 html {
