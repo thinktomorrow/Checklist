@@ -61,43 +61,8 @@
       </article>
       <?php }; ?>
 
-      <div id="celebration" class="hidden fixed top-0 bottom-0 left-0 right-0 w-screen h-screen bg-black-50">
-        <img src="https://media1.giphy.com/media/10hO3rDNqqg2Xe/giphy.gif?cid=ecf05e47ad963626f79cccb46e2dc5b0ae5aa92bd5e20742&rid=giphy.gif" alt="celebrate" class="block mx-auto stack">
-      </div>
+      <?php include('_layout/partials/celebrate.php') ?>
   </main>
-
-<script>
-  //get total of articles
-  var totalItems = document.querySelectorAll('article').length;
-  var totalNumber = document.getElementById("numberOfItems");
-  totalNumber.innerHTML = totalItems;
-
-
-  // TODO: show numbers of checked item in counter
-  var clickOnArticle = document.querySelectorAll('article');  
-  var numberOfItems = document.getElementById("checkedItems");
-  var totalChecked = document.getElementsByClassName('active').length;
-
-  function addCheckedItemsToDiv()
-  {
-    totalChecked ++;
-    numberOfItems.innerHTML = totalChecked;
-    if( totalChecked === totalItems){
-      timeToCelebrate();
-      // window.alert('Good job. Tijd om de deur achter je toe te trekken.')
-    }
-  };
-  for (i = 0; i < clickOnArticle.length; i++) {
-    clickOnArticle[i].addEventListener("click", addCheckedItemsToDiv);
-  }
-
-  function timeToCelebrate(){
-    var celebrate = document.getElementById("celebration");
-    celebrate.classList.remove("hidden");
-  }
-
-  
-</script>
 
   <footer class="container stack text-center font-hairline text-sm text-primary-800">
     &copy; 2020 - &#129412; &#127881; door Think Tomorrow
